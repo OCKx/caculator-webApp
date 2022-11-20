@@ -1,0 +1,72 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, red, blue);
+    padding: 0;
+    margin: 0;
+    font-family: 'Carter One', cursive;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.calculator-div{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 90px);
+}
+
+button{
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.674);
+}
+.calculator-div button:hover{
+    background-color: rgba(255, 255, 255, 0.922);
+}
+
+.double-but{
+    grid-column: span 2;
+}
+
+.screem{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.71);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.previous-view{
+    color: rgba(255, 255, 255, 0.725);
+    font-size: 1.5rem;
+}
+
+.current-view{
+    font-size: 2.5rem;
+}
+
+h4{
+    text-align: center;
+    color: yellow;
+}
+
+h2{
+    color: white;
+    position: fixed;
+    margin-top: -5px;
+    background-color: black;
+    padding: 2px;
+}
